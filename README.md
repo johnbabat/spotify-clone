@@ -4,7 +4,7 @@
 This project was built to practice react and front end design. It has some very basic functionality which includes fetching the discover weekly page from a user's account after authentication. None of the links work for now.
 
 ## Hosted on:
-https://netflix-clone-9bcaf.web.app/
+...
 
 ## Available Scripts
 
