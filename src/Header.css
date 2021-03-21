@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 30px 0px;
+}
+
+.header_left {
+    background-color: white;
+    color: gray;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 15px;
+    width: 25%;
+    min-width: 69px;
+}
+
+.header_left > input {
+    border: none;
+    width: 100%
+}
+
+.header_left > input:focus {
+    outline: none;
+}
+
+.header_right {
+    align-items: center;
+}
+
+.name_and_avatar {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 30px;
+    padding: 1px 20px 1px 1px;
+}
+
+.name_and_avatar > h4 {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .name_and_avatar> h4 {
+        display: none;
+    }
+
+    .name_and_avatar {
+        padding: 2px;
+    }
+}
+

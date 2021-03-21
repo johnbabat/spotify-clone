@@ -1,0 +1,55 @@
+.songRow {
+    padding: 7px;
+    display: flex;
+    color: white;
+    align-items: center;
+    min-width: 700px;
+}
+
+.songRow:hover {
+    background-color: rgb(46, 46, 46);
+}
+
+.songRow_info {
+    margin-left: 10px;
+    height: 44px;
+}
+
+.songRow_info > h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.songRow_info > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: gray;
+}
+
+.songRow_info > p > span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.songRow_info > p > span:hover > .comma {
+    color: gray;
+    text-decoration: none;
+}
+
+.songRow:hover > .songRow_info > p > span {
+    color: white;
+}
+
+.songRow:hover > .songRow_info > p > span > .comma {
+    color: gray;
+}
+
+.song_artist {
+    margin-left: 5px;
+}
+
+.album_image {
+    height: 40px;
+}

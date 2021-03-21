@@ -1,12 +1,17 @@
-# Getting Started with Create React App
+# Spotify Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+This project was built to practice react and front end design. It has some very basic functionality which includes fetching the discover weekly page from a user's account after authentication. None of the links work for now.
+
+## Hosted on:
+https://netflix-clone-9bcaf.web.app/
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

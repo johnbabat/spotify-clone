@@ -1,0 +1,88 @@
+.content {
+    padding: 0px 30px;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    overflow-y: overlay;
+    background: linear-gradient(rgb(91, 87, 115), rgb(0, 0, 0, 1))
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content_info {
+    display: flex;
+    align-items: flex-end;
+    height: 240px;
+    padding: 0px 0px 30px 0px;
+}
+
+.content_info > img {
+    width: 15vw;
+    min-width: 192px;
+    max-width: 232px;
+}
+
+.content_infoText {
+    margin-left: 20px;
+}
+
+.content_infoText > h1 {
+    font-size: 6vw;
+}
+
+.content_infoText > strong {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.content_infoText > p {
+    color: #FFFFFFB3;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.content_infoText > p > strong {
+    color: white;
+}
+
+
+.content_infoText > p > span:before {
+    content: " • ";  
+}
+
+.info_bottom {
+    margin-top: 8px;
+}
+
+.content_icons {
+    display: flex;
+    align-items: center;
+}
+
+.content_icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+
+.big_playBtn {
+    font-size: 70px !important;
+    margin: 20px 0px;
+}
+
+.big_playBtn:hover {
+    transition: 100ms transform ease-in-out;
+    transform: scale(1.08);
+}
+
+.bottom_space {
+    height: 150px;
+}
+
+.moreOptions {
+    color: gray;
+}
+
+.moreOptions:hover {
+    color: white;
+}
