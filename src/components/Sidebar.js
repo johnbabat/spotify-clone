@@ -1,17 +1,18 @@
-import React from 'react';
 import './Sidebar.css';
-import SiderbarOption from './SiderbarOption';
+
+import { useDataLayerValue } from '../context/DataLayer';
+
+// Material UI
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
-import { useDataLayerValue } from './DataLayer';
 
+// Components
+import SiderbarOption from './SiderbarOption';
 
 function Sidebar() {
 
-    const [{ playlists }, dispatch ] = useDataLayerValue();
-
-    console.log(playlists)
+    const [{ playlists }] = useDataLayerValue();
 
     return (
         <div className="sidebar">
@@ -28,7 +29,7 @@ function Sidebar() {
                 <hr />
 
                 { playlists?.items?.map(element => (
-                    <SiderbarOption title={element.name} />
+                    <SiderbarOption title={element.name} key={element.id} />
                 )) }
             </div>
                       

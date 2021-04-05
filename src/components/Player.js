@@ -1,8 +1,10 @@
-import React from 'react'
-import Content from './Content'
-import Footer from './Footer'
-import Sidebar from './Sidebar'
 import './Player.css'
+
+// Components
+import Content from './Content';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+
 
 function Player() {
     return (

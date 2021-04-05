@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.css';
-import Login from './Login';
+
 import { getTokenFromUrl } from './spotify'
 import SpotifyWebApi from "spotify-web-api-js";
-import { useDataLayerValue } from './DataLayer';
-import Player from './Player'
+import { useDataLayerValue } from './context/DataLayer';
+
+
+// Components
+import Login from './components/Login';
+import Player from './components/Player';
 
 const spotify = new SpotifyWebApi();
 
 function App() {
 
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -19,7 +23,7 @@ function App() {
     const _token = hash.access_token
 
     if (_token) {
-
+      
       spotify.setAccessToken(_token)
 
       dispatch({
@@ -33,14 +37,15 @@ function App() {
           user
         })
       })
-
+    
       spotify.getUserPlaylists().then((playlists) => {
+        console.log(playlists)
         dispatch({
           type: 'SET_PLAYLISTS',
           playlists
         })
       })
-
+    
       spotify.getPlaylist('37i9dQZEVXcWTU1pOrzy1u').then(response => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
@@ -50,30 +55,7 @@ function App() {
 
     }
 
-    spotify.setAccessToken(token)
-
-    spotify.getMe().then((user) => {
-      dispatch({
-        type: 'SET_USER',
-        user
-      })
-    })
-
-    spotify.getUserPlaylists().then((playlists) => {
-      dispatch({
-        type: 'SET_PLAYLISTS',
-        playlists
-      })
-    })
-
-    spotify.getPlaylist('37i9dQZEVXcWTU1pOrzy1u').then(response => {
-      dispatch({
-        type: "SET_DISCOVER_WEEKLY",
-        discover_weekly: response
-      })
-    })
-
-  }, [])
+  }, [dispatch])
   
 
   return (

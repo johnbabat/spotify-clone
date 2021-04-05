@@ -1,17 +1,20 @@
-import React from 'react';
-import { useDataLayerValue } from './DataLayer';
+import { useDataLayerValue } from '../context/DataLayer';
+
+import './Content.css';
+
+// Components
 import Header from './Header';
 import SongRow from './SongRow'
-import './Content.css';
+
+// Material UI
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 
-
 function Content() {
 
-    const [{ discover_weekly }, dispatch] = useDataLayerValue();
+    const [{ discover_weekly }] = useDataLayerValue();
 
     function timeConvert(n) {
         var num = n/60000;
@@ -58,8 +61,8 @@ function Content() {
                 </div>
 
                 <div>
-                    {discover_weekly?.tracks?.items.map(item => (
-                        < SongRow track={item.track} />
+                    {discover_weekly?.tracks?.items.map((item, index) => (
+                        < SongRow track={item.track} index={index} key={item.track.id} />
                     ))}
                 </div>
                 <div className="bottom_space"></div>

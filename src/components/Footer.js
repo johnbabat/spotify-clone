@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import './Footer.css'
+import './Footer.css';
+
+// Material UI
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
